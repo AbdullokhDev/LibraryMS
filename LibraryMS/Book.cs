@@ -31,6 +31,8 @@ namespace LibraryMS
         // step 6
         public BookStatus Status { get; set; }
 
+        // step 18 adding Authors list 
+        public List<string> Authors { get; set; }
     }
     // step 5
 
