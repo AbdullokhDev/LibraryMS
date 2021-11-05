@@ -19,5 +19,12 @@ namespace LibraryMS
         public List<Reservation> Reservations { get; set; }
         public List<User> Users { get; set; }
         public List<Loan> Loans { get; set; }
+
+        public void CheckReservation()
+        {
+            foreache(Reservation resItem in Reservations){
+
+            }
+        }
     }
 }

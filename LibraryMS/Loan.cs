@@ -23,5 +23,15 @@ namespace LibraryMS
         public Book BorrowedBook { get; set; }
         public DateTime DateTaken { get; set; }
         public DateTime ReturnedDate { get; set; }
+        public bool IsReturned { get; set; }
+        public DateTime ActualReturnedDate { get; set; }
+
+        public void ReturnLoanBook()
+        {
+            IsReturned = true;
+            BorrowedBook.BookStatus = BookStatus.Available;
+            ActualReturnedDate = DateTime.Now;
+            Borrower.BooksCurrentlyOnLoan.Remove(BorrowedBook);
+        }
     }
 }

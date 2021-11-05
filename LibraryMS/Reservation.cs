@@ -25,7 +25,25 @@ namespace LibraryMS
         public int ReservationDuration { get; set; }
 
         // step 19 we call enum then proporty name is Status
-        public ReservationStatus Status { get; set; }
+        public ReservationStatus ReservationStatus { get; set; }
+
+        // method
+        public bool IsActive()
+        {
+            if (this.ReservationStatus == ReservationStatus.Active)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void FullfillReservation()
+        {
+            this.ReservationStatus = ReservationStatus.Fullfilled;
+        }
     }
 
     // step 18

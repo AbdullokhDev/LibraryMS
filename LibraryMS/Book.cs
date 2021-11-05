@@ -27,9 +27,10 @@ namespace LibraryMS
         public string Publisher { get; set; }
         public string ISBN { get; set; }
         public string Category { get; set; }
+ 
 
         // step 6
-        public BookStatus Status { get; set; }
+        public BookStatus BookStatus { get; set; }
 
         // step 18 adding Authors list 
         public List<string> Authors { get; set; }
